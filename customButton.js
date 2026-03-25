@@ -9,7 +9,6 @@
     window.unlayer.registerTool({
       name: "custom_analytic_button",
       label: "My Analytic Button",
-      icon: "fa-smile",
       category: "Custom",
       supportedDisplayModes: ["web", "email"],
 
