@@ -1,14 +1,15 @@
 (function () {
-  function waitForUnlayer() {
-    if (!window.unlayer) {
-      return setTimeout(waitForUnlayer, 100);
+  function init() {
+    if (!window.unlayer || !window.unlayer.registerTool) {
+      return setTimeout(init, 200);
     }
 
-    console.log("✅ Custom tool registering");
+    console.log("🔥 REGISTERING TOOL");
 
     window.unlayer.registerTool({
       name: "custom_analytic_button",
       label: "My Analytic Button",
+      icon: "fa-smile",
       category: "Custom",
       supportedDisplayModes: ["web", "email"],
 
@@ -46,5 +47,5 @@
     });
   }
 
-  waitForUnlayer();
+  init();
 })();
